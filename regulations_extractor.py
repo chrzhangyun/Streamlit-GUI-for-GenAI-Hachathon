@@ -2,7 +2,7 @@ import re
 
 def extract_points(text):
     # Regex to match patterns like (a), (b), (c) followed by text
-    pattern = r'\((\w)\)\s*(.*?)\s*(?=\(\w\)|$)'
+    pattern = r'\(([a-z])\)\s*(.*?)\s*(?=\([a-z]\)|$)'
     
     # Find all matches and store them in a dictionary
     points = {match[0]: match[1] for match in re.findall(pattern, text)}
